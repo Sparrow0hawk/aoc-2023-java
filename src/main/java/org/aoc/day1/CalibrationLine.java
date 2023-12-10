@@ -7,14 +7,14 @@ import java.util.stream.Collectors;
 
 public class CalibrationLine {
 
-    private List<String> tokens;
+    private List<Character> tokens;
 
     public CalibrationLine(String line) {
-        tokens = Arrays.stream(line.split("\\D+")).filter(s -> !s.isEmpty()).collect(Collectors.toList());
+        tokens = line.chars().mapToObj(c -> (char) c).filter(Character::isDigit).collect(Collectors.toList());
     }
 
 
     public Integer value() {
-        return Integer.parseInt(tokens.getFirst().concat(tokens.getLast()));
+        return Integer.parseInt(String.valueOf(tokens.getFirst()) + tokens.getLast());
     }
 }

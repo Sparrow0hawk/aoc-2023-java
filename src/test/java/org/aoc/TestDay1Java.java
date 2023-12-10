@@ -14,13 +14,14 @@ public class TestDay1Java {
                 1abc2
                 pqr3stu8vwx
                 a1b2c3d4e5f
-                treb7uchet""";
+                treb7uchet
+                10000000001""";
 
         Calibration calibration = new Calibration();
 
         test.lines().forEach(calibration::add_line);
 
-        assertEquals(calibration.values().stream().mapToInt(Integer::intValue).sum(), 142);
+        assertEquals(calibration.values().stream().mapToInt(Integer::intValue).sum(), 153);
     }
 
 
