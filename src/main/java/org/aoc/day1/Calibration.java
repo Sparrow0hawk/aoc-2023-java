@@ -16,6 +16,10 @@ public class Calibration {
         lineArr.add(new CalibrationLine(line));
     }
 
+    public void parse_numbers() {
+        lineArr.forEach(CalibrationLine::parse_numbers);
+    }
+
     public List<Integer> values() {
         return lineArr.stream().map(CalibrationLine::value).collect(Collectors.toList());
     }

@@ -12,6 +12,8 @@ public class Main {
 
         reader.lines().forEach(calibration::add_line);
 
+        calibration.parse_numbers();
+
         int total_calibration_values = calibration.values().stream().mapToInt(Integer::intValue).sum();
 
         System.out.println("Solution for day 1 is: " + total_calibration_values);

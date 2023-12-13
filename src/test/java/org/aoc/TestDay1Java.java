@@ -21,6 +21,8 @@ public class TestDay1Java {
 
         test.lines().forEach(calibration::add_line);
 
+        calibration.parse_numbers();
+
         assertEquals(calibration.values().stream().mapToInt(Integer::intValue).sum(), 153);
     }
 
