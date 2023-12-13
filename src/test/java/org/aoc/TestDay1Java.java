@@ -26,5 +26,26 @@ public class TestDay1Java {
         assertEquals(calibration.values().stream().mapToInt(Integer::intValue).sum(), 153);
     }
 
+    @Test
+    void testPart2() {
+        String test = """
+                two1nine
+                eightwothree
+                abcone2threexyz
+                xtwone3four
+                4nineeightseven2
+                zoneight234
+                7pqrstsixteen""";
+
+        Calibration calibration = new Calibration();
+
+        test.lines().forEach(calibration::add_line);
+
+        calibration.parse_number_words();
+
+        assertEquals(calibration.values().stream().mapToInt(Integer::intValue).sum(), 281);
+
+    }
 
 }
+

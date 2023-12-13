@@ -20,6 +20,10 @@ public class Calibration {
         lineArr.forEach(CalibrationLine::parse_numbers);
     }
 
+    public void parse_number_words() {
+        lineArr.forEach(CalibrationLine::parse_number_words);
+    }
+
     public List<Integer> values() {
         return lineArr.stream().map(CalibrationLine::value).collect(Collectors.toList());
     }
