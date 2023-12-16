@@ -17,5 +17,5 @@ with the format `dayX.txt` where `X` is the number of the day.
    ```
 2. Run compiled code
     ```bash
-   java -cp target/aoc-2023-1.0-SNAPSHOT.jar org.aoc.Main
+   java -jar target/aoc-2023-1.0-SNAPSHOT.jar
    ```
