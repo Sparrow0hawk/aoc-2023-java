@@ -5,7 +5,7 @@ import org.aoc.day1.Calibration;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestDay1Java {
+public class TestDay1 {
 
     @Test
     void testPart1() {
