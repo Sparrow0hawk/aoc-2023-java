@@ -7,5 +7,6 @@ public class Main {
         org.aoc.day1.Main.solve();
         org.aoc.day1.Main.solve_part2();
         org.aoc.day2.Main.solve();
+        org.aoc.day2.Main.solve_part2();
     }
 }

@@ -24,5 +24,16 @@ public class Main {
 
         System.out.println("Solution for day 2 part 1 is: " + total_valid_game_ids);
     }
+    public static void solve_part2() throws FileNotFoundException {
+        BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/day2.txt"));
+
+        GameBag game_bag = new GameBag();
+
+        reader.lines().forEach(game_bag::add_game);
+
+        int total_game_power = game_bag.games.stream().mapToInt(Game::game_power).sum();
+
+        System.out.println("Solution for day 2 part 2 is: " + total_game_power);
+    }
 
 }

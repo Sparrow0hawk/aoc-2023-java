@@ -23,4 +23,12 @@ public class Game {
     public boolean is_valid(Integer red, Integer blue, Integer green) {
         return plays.stream().allMatch(play -> play.red <= red & play.blue <= blue & play.green <= green);
     }
+
+    public Integer game_power() {
+        int max_red = plays.stream().mapToInt(play -> play.red).max().orElseThrow();
+        int max_blue = plays.stream().mapToInt(play -> play.blue).max().orElseThrow();
+        int max_green = plays.stream().mapToInt(play -> play.green).max().orElseThrow();
+
+        return max_red * max_blue * max_green;
+    }
 }

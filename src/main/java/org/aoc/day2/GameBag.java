@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 import org.aoc.day2.Game;
 
 public class GameBag {
-    private List<Game> games;
+    public List<Game> games;
     private Integer red;
     private Integer blue;
     private Integer green;
