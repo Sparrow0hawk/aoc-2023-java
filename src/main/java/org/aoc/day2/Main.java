@@ -14,7 +14,9 @@ public class Main {
         int blue = 14;
         int green = 13;
 
-        GameBag game_bag = new GameBag(red, blue, green);
+        GameBag game_bag = new GameBag();
+
+        game_bag.set_colour(red, blue, green);
 
         reader.lines().forEach(game_bag::add_game);
 

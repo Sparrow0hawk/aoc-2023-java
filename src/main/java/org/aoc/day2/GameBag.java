@@ -12,11 +12,14 @@ public class GameBag {
     private Integer blue;
     private Integer green;
 
-    public GameBag(Integer red, Integer blue, Integer green) {
+    public GameBag() {
+        this.games = new ArrayList<>();
+    }
+
+    public void set_colour(Integer red, Integer blue, Integer green) {
         this.red = red;
         this.blue = blue;
         this.green = green;
-        this.games = new ArrayList<>();
     }
 
     public void add_game(String line) {

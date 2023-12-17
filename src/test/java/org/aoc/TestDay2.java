@@ -19,7 +19,9 @@ public class TestDay2 {
         int green = 13;
         int blue = 14;
 
-        GameBag game_bag = new GameBag(red, blue, green);
+        GameBag game_bag = new GameBag();
+
+        game_bag.set_colour(red, blue, green);
 
         test.lines().forEach(game_bag::add_game);
 
