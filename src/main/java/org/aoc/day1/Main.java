@@ -16,7 +16,7 @@ public class Main {
 
         int total_calibration_values = calibration.values().stream().mapToInt(Integer::intValue).sum();
 
-        System.out.println("Solution for day 1 is: " + total_calibration_values);
+        System.out.println("Solution for day 1 part 1 is: " + total_calibration_values);
     }
 
     public static void solve_part2() throws FileNotFoundException {
